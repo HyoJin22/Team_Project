@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>카카오뱅크 ERP - 고객센터 > 이벤트 > 진행중 이벤트 글 상세보기</title>
+<link rel="icon" href="images/favicon/favi.gif" />
+<link rel="stylesheet" type="text/css" href="css/cmn.css" />
+<link rel="stylesheet" type="text/css" href="css/popup.css" />
+<style type="text/css">
+/* 가로 사이즈 조정용 */
+.cont_wrap {
+	width: 900px;
+}
+.popup_bg {
+	/* 숨김용 */
+	/* display: none; */
+	display: none;
+}
+.popup {
+	/* 숨김용 */
+	/* display: none; */
+	/* 크기변경용 */
+	width: 600px;
+	height: 400px;
+	top: calc(50% - 200px); /* 높이 반  */
+	left: calc(50% - 300px); /* 너비 반 */
+	display: none;
+}
+
+.popup_cont {
+	/* 내용 변경용 */
+	font-size: 10.5pt;
+}
+/* 개인 작업 영역 */
+
+#wrap {
+
+	width: 1000px;
+	height: 720px;
+	
+	font-size: 20px;
+	
+	margin-top: 20px;
+	margin-left: 80px;
+	
+}
+
+#header{
+
+	width: 1000px;
+	height: 50px;
+	border: 1px solid gray;	
+	
+	font-size: 20px;
+	font-weight: bold;
+	
+	text-indent: 20px;
+
+	padding-top: 20px;
+
+}
+
+#header2{
+
+	width: 1000px;
+	height: 50px;
+	border: 1px solid gray;
+
+	text-indent: 20px;
+
+	padding-top: 20px;
+}
+
+#header2_writer{
+
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+#header2_date {
+
+	font-size: 15px;
+}
+
+#contents{
+
+	width: 1000px;
+	height: 500px;
+	border: 1px solid gray;
+	
+	font-size: 20px;
+	
+	text-indent: 20px;
+		
+}
+
+#img_rac{
+
+	width: 400px;
+	height: 300px;
+	
+	margin-top: 20px;
+
+}
+
+#footer{
+
+	width: 1000px;
+	height: 600px;
+	
+}
+
+#btn_list {
+
+	width: 50px;
+	height: 35px;
+
+	padding: 5px;
+	padding-bottom: -5px;
+	vertical-align: top;
+	
+	margin-top: 20px;
+	
+	border-style: 1px solid #F2CB05;
+	background-color: #F2CB05;
+	font-size: 15px;
+	font-weight:bold;
+
+}
+
+#btn_correct {
+
+	width: 50px;
+	height: 35px;
+	font-size: 15px;
+	font-weight:bold;
+	padding: 5px;
+	padding-bottom: -5px;
+	vertical-align: top;
+	
+	margin-top: -35px;
+	margin-left: 890px;
+	
+	border-style: 1px solid #F2CB05;
+	background-color: #F2CB05;
+	
+	
+}
+
+#btn_cancle {
+
+	width: 50px;
+	height: 35px;
+	font-size: 15px;
+	font-weight:bold;
+	padding: 5px;
+	padding-bottom: -5px;
+	vertical-align: top;
+	
+	border-style: 1px solid #F2CB05;
+	background-color: #F2CB05;
+
+	margin-top: -61px;
+	margin-left: 950px;
+
+}
+
+#wrap_comment {
+
+	width: 1000px;
+	height: 500px;
+					
+	font-size: 20px;
+	
+	margin-top: 10px;
+	margin-left: 80px;
+
+}
+
+#comment_header {
+	
+	font-size: 20px;
+	font-weight: bold;
+	
+	text-indent: 20px;
+	
+	width: 1000px;
+	height: 50px;
+		
+}
+
+#comment_header2 {
+
+	font-size: 20px;
+	font-weight: bold;
+	
+	width: 1000px;
+	height: 50px;
+
+}
+
+#more_Btn {
+
+	display: inline-block;
+	border-style: 1px solid #F2CB05;
+	background-color: #F2CB05;
+
+	width: 1000px;
+	height: 50px;
+
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	color: black;
+}
+
+#comment_content {
+	
+	width: 1000px;
+	height: 150px;
+	
+	border: 1px solid gray;
+
+	margin-top: 20px;
+}
+
+#commnet_writer {
+
+	display: inline-block;
+	width: 1000px;
+	height: 50px;
+	
+	font-size: 15px;
+	font-weight: bold;
+	
+	text-indent: 20px;
+	
+	padding-top: 15px;
+
+}
+
+#com_writer_date {
+
+	font-size: 12px;
+
+}
+
+#com_correct {
+
+	width: 50px;
+	height: 35px;
+	font-size: 15px;
+	font-weight:bold;
+	padding: 5px;
+	padding-bottom: -5px;
+	vertical-align: top;
+	
+	border-style: 1px solid #F2CB05;
+	background-color: #F2CB05;
+	
+	margin-top: -10px;
+	margin-left: 860px;
+	
+}
+
+#com_cancle {
+
+	width: 50px;
+	height: 35px;
+	font-size: 15px;
+	font-weight:bold;
+	padding: 5px;
+	padding-bottom: -5px;
+	vertical-align: top;
+	
+	border-style: 1px solid #F2CB05;
+	background-color: #F2CB05;
+	
+	margin-top: -20px;
+	margin-left: 920px;
+		
+}
+
+#comment_cont {
+	
+	font-size: 15px;
+	text-indent: 20px;
+}
+
+#comment_write {
+
+	width: 1000px;
+	height: 200px;
+	
+	border: 1px solid #F2CB05;
+
+	margin-top: 20px;
+}
+
+#co_writer{
+
+	width: 1000px;
+	height: 50px;
+	
+	font-weight:bold;
+	font-size: 20px;
+	text-indent: 20px;
+	
+	border: 1px solid #F2CB05;
+	
+	padding-top: 15px;
+	
+}
+
+#co_content {
+	
+	width: 1000px;
+	height: 100px;
+
+}
+
+#co_cont {
+
+	width: 995px;
+	height: 100px;
+	
+	border: 1px solid #F2CB05;
+
+}
+
+#btn_cowrite {
+
+	display: inline-block;
+	border-style: 1px solid #F2CB05;
+	background-color: #F2CB05;
+
+	width: 1000px;
+	height: 50px;
+	
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	color: black;
+
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="popup_bg"></div>
+<div class="popup">
+	<div class="popup_title">팝업타이틀</div>
+	<div class="popup_cont">
+	<!-- 팝업디자인 들어갈 곳 -->
+	내용입니다.
+	</div>
+	<div class="popup_btn_area">
+	<!-- 버튼 개수는 자유 -->
+		<div class="cmn_btn_mr">버튼1</div>
+		<div class="cmn_btn_mr">버튼2</div>
+		<div class="cmn_btn_mr">버튼3</div>
+	</div>
+</div>
+<div class="top_area">
+	<div class="logo"><div class="logo_erp_text">ERP</div></div>
+	<div class="menu_depth1_wrap">
+		<!-- _on 달린 것이 활성화 상태 -->
+		<div class="top_menu">
+			<div class="top_menu_text">인사</div>
+			<div class="top_menu_bar"></div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_text">그룹웨어</div>
+			<div class="top_menu_bar"></div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_text">경영관리</div>
+			<div class="top_menu_bar"></div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_text">영업관리</div>
+			<div class="top_menu_bar"></div>
+		</div>
+		<div class="top_menu_on">
+			<div class="top_menu_text">고객지원</div>
+			<div class="top_menu_bar"></div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_text">경영정보</div>
+			<div class="top_menu_bar"></div>
+		</div>
+	</div>
+</div>
+<div class="left_area">
+	<div class="emp_info_area">
+		<div class="emp_info">
+			<div class="emp_image_area">
+				<div class="emp_image_wrap">
+					<img alt="사원이미지" src="images/cmn/emp_image.png"/>
+				</div>
+			</div>
+			<div class="emp_info_wrap">
+				<div class="emp_name_txt">너굴맨<div class="emp_opt_btn"></div></div>
+				<div class="emp_dept_txt">고객지원팀 대리</div>
+			</div>
+		</div>
+		<div class="emp_menu_area">
+			<div class="emp_menu">메신저</div>
+			<div class="emp_menu">내정보</div>
+			<div class="emp_menu_last">로그아웃</div>
+		</div>
+	</div>
+	<div class="left_menu_dpeth1_txt">고객지원</div>
+	<div class="left_menu_wrap">
+		<!-- 2depth 메뉴 -->
+		<!-- 2depth 단일메뉴 -->
+		<div class="menu_depth2">
+			<div class="menu_depth2_single_area">
+				<div class="menu_depth2_text">단일메뉴</div>
+				<div class="left_menu_bar"></div>
+			</div>
+		</div>
+		<!-- 2depth 복수메뉴 -->
+		<!-- 현재 선택중인 메뉴는 on -->
+		<div class="menu_depth2">
+			<div class="menu_depth2_area">
+				<div class="menu_depth2_text">통합정보</div>
+				<div class="left_menu_bar"></div>
+			</div>
+			<!-- 3depth 메뉴 -->
+			<!-- 현재 선택중인 메뉴는 on -->
+			<div class="menu_depth3_wrap">
+				<div class="menu_depth3">회계관리</div>
+				<div class="menu_depth3">회계관리</div>
+			</div>
+		</div>
+		<div class="menu_depth2">
+			<div class="menu_depth2_area">
+				<div class="menu_depth2_text">콜센터</div>
+				<div class="left_menu_bar"></div>
+			</div>
+			<div class="menu_depth3_wrap">
+				<div class="menu_depth3">회계관리</div>
+				<div class="menu_depth3">회계관리</div>
+			</div>
+		</div>
+		<div class="menu_depth2">
+			<div class="menu_depth2_area">
+				<div class="menu_depth2_text">FAQ</div>
+				<div class="left_menu_bar"></div>
+			</div>
+			<div class="menu_depth3_wrap">
+				<div class="menu_depth3">회계관리</div>
+				<div class="menu_depth3">회계관리</div>
+			</div>
+		</div>
+		<div class="menu_depth2">
+			<div class="menu_depth2_area">
+				<div class="menu_depth2_text">1:1 문의</div>
+				<div class="left_menu_bar"></div>
+			</div>
+			<div class="menu_depth3_wrap">
+				<div class="menu_depth3">회계관리</div>
+				<div class="menu_depth3">회계관리</div>
+			</div>
+		</div>
+		<div class="menu_depth2_on">
+			<div class="menu_depth2_area">
+				<div class="menu_depth2_text">이벤트</div>
+				<div class="left_menu_bar"></div>
+			</div>
+			<div class="menu_depth3_wrap">
+				<!-- 현재 선택중인 메뉴는 on -->
+				<div class="menu_depth3_on">진행중 이벤트</div>
+				<div class="menu_depth3">종료된 이벤트</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="right_area">
+	<div class="navi_bar">
+		Home
+		<div class="navi_next"></div>
+		고객지원
+		<div class="navi_next"></div>
+		이벤트
+		<div class="navi_next"></div>
+		진행중 이벤트
+	</div>
+	<!-- 내용영역 -->
+	<div class="cont_wrap">
+		<div class="page_title_bar">
+			<div class="page_title_text">진행중 이벤트</div>
+			<!-- 검색영역 선택적 사항 -->
+		
+		<!-- 해당 내용에 작업을 진행하시오. -->
+		<div class="cont_area">
+			<!-- 여기부터 쓰면 됨 -->
+		<div id="wrap">
+			<div id="header">
+			
+			너굴맨의 하루
+			</div>
+			<div id="header2">
+				<span id="header2_writer">너굴맨</span>
+				<sapn id="header2_date">2022-01-01 15:21</sapn>
+			</div>
+			<div id="contents">
+				<img src="rac_01.JPG" alt="너굴맨" id="img_rac">
+				<div>오류는 너굴맨이 처리했으니 안심하라구</div>				
+			</div>
+			
+			<div id="footer">
+				<div><input type="submit" value="목록" id="btn_list"></div>
+				<div><input type="submit" value="수정" id="btn_correct"></div>
+				<div><input type="submit" value="삭제" id="btn_cancle"></div>
+			</div>
+		</div>
+		
+		<div id="wrap_comment">
+			<div id="comment_header">
+			댓글 20개
+			</div>
+			
+			<div id="comment_header2">
+				<div><input type="button" id="more_Btn" value="댓글 더 보기" ></div>
+			</div>
+			
+			<div id="comment_content">
+				<div id="commnet_writer">
+				랫서판다 <span id="com_writer_date">2022-01-01 17:10</span>
+				<!-- <div><input type="submit" value="수정" id="com_correct"></div> -->
+				<div><input type="submit" value="삭제" id="com_cancle"></div>
+				</div>
+				<div id="comment_cont">
+				<div>너굴맨 오류가 생겨요</div>
+				</div>
+			</div>
+			
+			<div id="comment_write">
+				<div id="co_writer">
+				관리자
+				</div>
+				<div id="co_content"><textarea id="co_cont"></textarea></div>
+				<div><input type="submit" value="댓글 쓰기" id="btn_cowrite"></div>		
+			</div>
+			
+		</div>		
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
